@@ -263,4 +263,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
+    // ─── VIDEO POPUP MODAL ───
+    const videoModal = document.getElementById('videoModal');
+    const videoModalIframe = document.getElementById('videoModalIframe');
+    const videoModalClose = document.getElementById('videoModalClose');
+    const mainVideoPlaceholder = document.getElementById('mainVideoPlaceholder');
+
+    if (mainVideoPlaceholder && videoModal && videoModalIframe) {
+        const youtubeUrl = mainVideoPlaceholder.getAttribute('data-youtube');
+
+        mainVideoPlaceholder.addEventListener('click', () => {
+            if (youtubeUrl) {
+                videoModalIframe.src = youtubeUrl + '?autoplay=1&rel=0';
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            videoModalIframe.src = '';
+            document.body.style.overflow = '';
+        }
+
+        videoModalClose.addEventListener('click', closeVideoModal);
+
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+    }
+
 });
