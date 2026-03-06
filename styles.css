@@ -890,6 +890,217 @@ a {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   JOURNEY SECTION — FROM RING TO MAT
+   ═══════════════════════════════════════════════════════════════ */
+.section-journey {
+    background: var(--charcoal);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-journey::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.section-journey .section-tag {
+    color: var(--gold);
+}
+
+.section-journey .section-tag::before {
+    background: var(--gold);
+}
+
+.section-journey .section-title {
+    color: white;
+}
+
+.section-journey .section-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.journey-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.journey-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    text-align: center;
+    transition: all 0.4s var(--ease-out-expo);
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(199, 91, 18, 0.08) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.journey-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(199, 91, 18, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.journey-card:hover::before {
+    opacity: 1;
+}
+
+.journey-card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.journey-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.journey-card p {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.55);
+    position: relative;
+    z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PHILOSOPHY SECTION — RISHI RIN
+   ═══════════════════════════════════════════════════════════════ */
+.section-philosophy {
+    background: var(--cream);
+    position: relative;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.philosophy-content p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--charcoal-light);
+    margin-bottom: 20px;
+}
+
+.philosophy-content strong {
+    color: var(--charcoal);
+}
+
+.philosophy-quote-block {
+    position: sticky;
+    top: 120px;
+}
+
+.philosophy-quote {
+    background: var(--warm-white);
+    padding: 40px 36px;
+    border-left: 4px solid var(--saffron);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 28px;
+}
+
+.philosophy-quote p {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.philosophy-quote cite {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-style: normal;
+    color: var(--saffron);
+    font-weight: 600;
+}
+
+.rishi-rin-badge {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: linear-gradient(135deg, rgba(199, 91, 18, 0.08), rgba(212, 168, 67, 0.08));
+    border: 1px solid rgba(199, 91, 18, 0.15);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+}
+
+.rishi-rin-symbol {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+}
+
+.rishi-rin-badge strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+}
+
+.rishi-rin-badge span {
+    font-size: 0.88rem;
+    color: var(--warm-gray);
+    line-height: 1.5;
+}
+
+/* Responsive — Journey & Philosophy */
+@media (max-width: 1024px) {
+    .journey-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .philosophy-quote-block {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .journey-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .journey-card {
+        padding: 32px 24px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    VEDIC YOGA SECTION (PILLARS)
    ═══════════════════════════════════════════════════════════════ */
 .section-vedic {
