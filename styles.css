@@ -783,7 +783,7 @@ a {
 
 .about-credentials {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     margin-top: 36px;
 }
