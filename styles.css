@@ -1600,6 +1600,170 @@ a {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   PDF SUBSCRIPTION SECTION
+   ═══════════════════════════════════════════════════════════════ */
+.section-pdf {
+    background: var(--warm-white);
+}
+
+.pdf-subscription-card {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--cream);
+    border-radius: var(--radius-xl);
+    padding: 60px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(199, 91, 18, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.pdf-subscription-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(199, 91, 18, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.pdf-content .section-tag {
+    margin-bottom: 16px;
+}
+
+.pdf-content .section-title {
+    margin-bottom: 20px;
+}
+
+.pdf-description {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--charcoal-light);
+    margin-bottom: 28px;
+}
+
+.pdf-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.pdf-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--charcoal-light);
+    font-weight: 500;
+}
+
+.pdf-features .feature-check {
+    color: var(--saffron);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.pdf-pricing {
+    display: flex;
+    justify-content: center;
+}
+
+.pdf-price-box {
+    background: var(--warm-white);
+    border-radius: var(--radius-lg);
+    padding: 40px 36px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(199, 91, 18, 0.1);
+    width: 100%;
+    max-width: 360px;
+    position: relative;
+}
+
+.pdf-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.pdf-tier {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--saffron);
+    margin-bottom: 16px;
+}
+
+.pdf-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 28px;
+}
+
+.pdf-price .price-currency {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--charcoal);
+    font-weight: 400;
+}
+
+.pdf-price .price-amount {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1;
+}
+
+.pdf-price .price-cents {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--charcoal);
+    font-weight: 400;
+}
+
+.pdf-price .price-period {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--warm-gray);
+    margin-left: 4px;
+}
+
+.pdf-subscribe-btn {
+    margin-bottom: 16px;
+}
+
+.pdf-guarantee {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+}
+
+@media (max-width: 900px) {
+    .pdf-subscription-card {
+        grid-template-columns: 1fr;
+        padding: 40px 28px;
+        gap: 40px;
+    }
+
+    .pdf-features {
+        grid-template-columns: 1fr;
+    }
+
+    .pdf-price-box {
+        max-width: 100%;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    FINAL CTA SECTION
    ═══════════════════════════════════════════════════════════════ */
 .section-final-cta {
